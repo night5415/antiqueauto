@@ -11,14 +11,13 @@ body {
   background-size: cover; 
   background-color: #464646;
 }
-.App {
-  text-align: center;
+.App { 
   max-width: 900px;
   margin: 0 auto;
   background-color: #fff;;
 }
  nav {
-   
+  text-align: center;
  }
  nav a {
    text-decoration: none;
@@ -30,6 +29,7 @@ main {
 }
 footer {
    padding-bottom: 25px;
+   text-align: center;
 }
 
 hr {
@@ -70,23 +70,17 @@ h2 {
   font-size: calc(10px + 2vmin); 
 }
 
-main {
-  min-height: 50vh; 
+.home {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-  
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-main {
+  width: 90%;
+  margin: 0 auto;
 }
+  
+ 
