@@ -1,3 +1,8 @@
+:root {
+  --main-color: #57BF9E;
+}
+
+
 body { 
   background-image: url(/background.jpg); 
   background-position: center center; 
@@ -12,27 +17,34 @@ body {
   margin: 0 auto;
   background-color: #fff;;
 }
-header {
-  
-}
+ nav {
+   
+ }
+ nav a {
+   text-decoration: none;
+   margin: 10px;
+   color: var(--main-color);
+ }
 main {
   height: 70vh;
 }
 footer {
    padding-bottom: 25px;
 }
+
 hr {
   width: 85%;
 }
+
 h2 {
-  color:#57BF9E;
+  color: var(--main-color);
   margin: 15px;
   font-family: 'Lobster', cursive;
 }
 
 .phone {
   text-decoration: none;
-  color:#57BF9E;
+  color: var(--main-color);
 }
 
 .social-icon {
