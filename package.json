@@ -12,11 +12,10 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
+    "deploy-prod": "firebase deploy -P default",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "firebase deploy"
+    "build": "react-scripts build",  
+    "deploy-stage": "firebase deploy -P staging"
   },
   "eslintConfig": {
     "extends": "react-app"

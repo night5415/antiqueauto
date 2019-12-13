@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "antiqueautoworks-7cf2d"
+    "default": "antiqueautoworks-7cf2d",
+    "staging": "antiqueauto-stage"
   }
 }
