@@ -5,16 +5,17 @@ import { employees, bio, projects } from './data/data.js'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Car from './components/Car';
+  Route 
+} from "react-router-dom"; 
 import Contact from './components/Contact';
 import Crew from './components/Crew';
 import Story from './components/Story';
 import Home from './components/Home';
+import Project from './components/Project';
+import { FullMenu, HamburgerMenu} from './components/Menu';
 
 function App() {
+  let date = new Date().getFullYear();
   return (
     <div className="App">
       <header className="App-header">
@@ -22,21 +23,15 @@ function App() {
       </header>
       <hr />
       <Router>
-        <nav className="navigation">
-          <Link to="/">Home</Link>
-          <Link to="/project">Projects</Link>
-          <Link to="/story">Our Story</Link>
-          <Link to="/crew">The Crew</Link>
-          <Link to="/contact">Contact Us</Link>
-        </nav>
-
+        <HamburgerMenu />
+        <FullMenu />
         <main>
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
             <Route path="/project">
-              <Project />
+              <Project projects = {projects}/>
             </Route>
             <Route path="/story">
               <Story story = {bio} />
@@ -51,15 +46,12 @@ function App() {
         </main>
       </Router>
       <hr />
-      <footer>
-        <div>
-          <div><a className="phone" href="tel:8166251651">(816) 625-1651</a></div>
-          <div><a className="phone" href="mailto:antiqueautoworks@gmail.com">antiqueautoworks@gmail.com</a></div>
-        </div>
+      <footer> 
         <div>
           <SocialIcon target="_blank" url="https://www.instagram.com/antiqueautoworks/" />
           <SocialIcon target="_blank" url="https://www.facebook.com/antiqueautoworks" />
         </div>
+        <div className="copyright"><i >Copyright {date}</i></div>
       </footer>
     </div>
   );
@@ -67,15 +59,7 @@ function App() {
 
 export default App;
  
-function Project() {
-  return (
-    <div className="project">
-      {
-        projects.map((project) => <Car key={project.id.toString()} project={project} />)
-      } 
-    </div>
-  );
-} 
+
 
  
 
