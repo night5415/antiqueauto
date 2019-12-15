@@ -1,32 +1,48 @@
 :root {
+  --back-color: #fff;
   --main-color: #57bf9e;
+  --cust-shadow: 0 0 10px gray;
 }
 
-body {
+@media(prefers-color-scheme: dark) {
+  :root {
+  --back-color: #000;;
+  --main-color: #fff;
+  --cust-shadow: none;
+  } 
+}
+
+html { color: var(--main-color) }
+
+body { 
   background-image: url(/background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
+  background-size: cover; 
 }
+
 .App {
   max-width: 900px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--back-color);
 }
+
 nav {
   text-align: center;
 }
+
 nav a {
   text-decoration: none;
   margin: 10px;
   color: var(--main-color);
 }
+
 main {
   min-height: 70vh;
   margin-top: 10px;
 }
+
 footer {
   padding-bottom: 25px;
   text-align: center;
@@ -46,7 +62,11 @@ img {
   width: 100%;
   height: auto;
   margin-top: 10px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: var(--cust-shadow);
+}
+
+iframe {
+  box-shadow: var(--cust-shadow);
 }
 
 .phone {
@@ -126,7 +146,7 @@ img {
   }
 
   .navigation {
-    background-color: #fff; 
+    background-color: var(--back-color);
     overflow: hidden;
     padding: 0 20px;
     text-align: left;
@@ -134,7 +154,7 @@ img {
     top: 30px;
     left: 30px; 
     border-radius: 6px; 
-    box-shadow: 0 0 10px gray;
+    box-shadow: var(--cust-shadow);
     max-height: 0;
     transition: max-height .3s ease-in;
   }
@@ -198,3 +218,5 @@ img {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
+
+
