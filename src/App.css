@@ -4,13 +4,13 @@
   --cust-shadow: 0 0 10px gray;
 }
 
-@media(prefers-color-scheme: dark) {
+/* @media(prefers-color-scheme: dark) {
   :root {
   --back-color: #000;;
   --main-color: #fff;
   --cust-shadow: none;
   } 
-}
+} */
 
 html { color: var(--main-color) }
 

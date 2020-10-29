@@ -14,7 +14,7 @@
   "scripts": {
     "deploy-prod": "firebase deploy -P default",
     "start": "react-scripts start",
-    "build": "react-scripts build",  
+    "build": "react-scripts build",
     "deploy-stage": "firebase deploy -P staging"
   },
   "eslintConfig": {

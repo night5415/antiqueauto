@@ -23,8 +23,8 @@ export function FullMenu() {
     return (
         <nav id="navigation" className="navigation" onClick={handleClick}>
             <Link to="/">Home</Link>
-            <Link to="/project">Projects</Link>
-            <Link to="/story">Our Story</Link>
+            {/* <Link to="/project">Projects</Link>
+            <Link to="/story">Our Story</Link> */}
             <Link to="/crew">The Crew</Link>
             <Link to="/contact">Contact Us</Link>
         </nav>
