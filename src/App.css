@@ -4,26 +4,30 @@
   --cust-shadow: 0 0 10px gray;
 }
 
-/* @media(prefers-color-scheme: dark) {
+@media(prefers-color-scheme: dark) {
   :root {
   --back-color: #000;;
   --main-color: #fff;
   --cust-shadow: none;
   } 
-} */
+}
 
 html { color: var(--main-color) }
 
 body { 
-  background-image: url(/background.jpg);
+  background-image: url(/back.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; 
+  background-size: cover;  
+}
+
+video {
+  width: 100%;
 }
 
 .App {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--back-color);
 }
