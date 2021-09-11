@@ -2,24 +2,28 @@
   --back-color: #fff;
   --main-color: #57bf9e;
   --cust-shadow: 0 0 10px gray;
+  --test: var(--main-color);
 }
 
-@media(prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-  --back-color: #000;;
-  --main-color: #fff;
-  --cust-shadow: none;
-  } 
+    --back-color: #000;
+    --main-color: #fff;
+    --cust-shadow: none;
+    --test: var(--back-color);
+  }
 }
 
-html { color: var(--main-color) }
+html {
+  color: var(--main-color);
+}
 
-body { 
-  background-image: url(/back.jpg);
+body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;  
+  background-size: cover;
+  background-color: var(--test);
 }
 
 video {
@@ -132,21 +136,21 @@ iframe {
     float: left;
     margin: 5px 15px 15px 0;
   }
-  .menu { 
+  .menu {
     visibility: hidden;
   }
   .navigation {
-    visibility: visible; 
-  } 
+    visibility: visible;
+  }
 }
 
 .xpand {
   max-height: 200px !important;
 }
 
-@media (max-width: 401px) { 
-  .menu { 
-    visibility: visible;  
+@media (max-width: 401px) {
+  .menu {
+    visibility: visible;
   }
 
   .navigation {
@@ -156,11 +160,11 @@ iframe {
     text-align: left;
     position: fixed;
     top: 30px;
-    left: 30px; 
-    border-radius: 6px; 
+    left: 30px;
+    border-radius: 6px;
     box-shadow: var(--cust-shadow);
     max-height: 0;
-    transition: max-height .3s ease-in;
+    transition: max-height 0.3s ease-in;
   }
   .navigation a {
     display: block;
@@ -200,10 +204,12 @@ iframe {
   top: 15px;
   left: 15px;
   display: inline-block;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 35px;
   height: 5px;
   background-color: var(--main-color);
@@ -216,11 +222,11 @@ iframe {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
-
-
